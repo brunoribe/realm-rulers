@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Realm Rulers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
+Realm Rulers é um jogo de simulação de reino baseado em navegador que permite aos jogadores construir e explorar seus próprios reinos. Inspirado por jogos de estratégia e simulação, o jogo utiliza geração procedural de mapas para criar um ambiente dinâmico e imersivo.
 
-Currently, two official plugins are available:
+## Funcionalidades
+- **Geração Procedural de Mapas**: Utiliza ruído simplex para criar terrenos variados com quatro tipos diferentes de terrenos: Água, Deserto, Grama e Montanha.
+- **Interatividade**: Clique nos tiles do mapa para explorar e interagir com o terreno.
+- **React e TypeScript**: Desenvolvido utilizando as mais recentes tecnologias web para uma experiência de usuário responsiva e interativa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
+- React
+- TypeScript
+- Simplex-Noise para geração de terrenos
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Instalação
+Para instalar e rodar o Realm Rulers localmente:
+```bash
+git clone https://github.com/seu-usuario/realm-rulers.git
+cd realm-rulers
+npm install
+npm start

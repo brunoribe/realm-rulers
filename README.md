@@ -1,22 +1,22 @@
 # Realm Rulers
 
-## Descrição
-Realm Rulers é um jogo de simulação de reino baseado em navegador que permite aos jogadores construir e explorar seus próprios reinos. Inspirado por jogos de estratégia e simulação, o jogo utiliza geração procedural de mapas para criar um ambiente dinâmico e imersivo.
+## Description
+Realm Rulers is a browser-based kingdom simulation game that allows players to build and explore their own kingdoms. Inspired by strategy and simulation games, it uses procedural map generation to create a dynamic and immersive environment.
 
-## Funcionalidades
-- **Geração Procedural de Mapas**: Utiliza ruído simplex para criar terrenos variados com quatro tipos diferentes de terrenos: Água, Deserto, Grama e Montanha.
-- **Interatividade**: Clique nos tiles do mapa para explorar e interagir com o terreno.
-- **React e TypeScript**: Desenvolvido utilizando as mais recentes tecnologias web para uma experiência de usuário responsiva e interativa.
+## Features
+- **Procedural Map Generation**: Uses simplex noise to create varied terrains with four different types of terrain: Water, Desert, Grass, and Mountain.
+- **Interactivity**: Click on the map tiles to explore and interact with the terrain.
+- **React and TypeScript**: Developed using the latest web technologies for a responsive and interactive user experience.
 
-## Tecnologias Utilizadas
+## Technologies Used
 - React
 - TypeScript
-- Simplex-Noise para geração de terrenos
+- Simplex-Noise for terrain generation
 
-## Instalação
-Para instalar e rodar o Realm Rulers localmente:
+## Installation
+To install and run Realm Rulers locally:
 ```bash
-git clone https://github.com/seu-usuario/realm-rulers.git
+git clone https://github.com/your-username/realm-rulers.git
 cd realm-rulers
 npm install
 npm start

@@ -56,6 +56,28 @@
   background-color: #706f6c;
 }
 
+.has-feature {
+  border: 1px solid #ffffff;
+}
+
+.popup {
+  position: fixed;
+  /* Usar fixed para manter o popup na parte inferior independente do scrolling */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Alinhar na parte inferior da tela */
+  height: 100px;
+  width: 300px;
+  /* Definir uma altura fixa para o popup */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Centralizar o conteúdo verticalmente dentro do popup */
+}
+
 
 .read-the-docs {
   color: #888;

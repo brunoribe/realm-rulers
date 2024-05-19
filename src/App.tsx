@@ -1,9 +1,49 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { GameMap } from './types/GameMap'
+import { TerrainType } from './enum/TerrainType'
+import { Adventurer } from './types/Adventurer'
 
 function App() {
   const [gameMap, setGameMap] = useState(new GameMap(15, 15))
+  const [terrainInfo, setTerrainInfo] = useState("")
+  const [featuresInfo, setFeaturesInfo] = useState("")
+
+  const generateAdventurers = () => {
+    const adventurers: Adventurer[] = [];
+    for (let i = 0; i < 10; i++) {
+      adventurers.push(new Adventurer(`Adventurer ${i}`));
+      console.log(adventurers[i].toString());
+    }
+  }
+
+  const tileClick = (tile: any) => {
+    let terrainInfo = `Terrain: ${TerrainType[tile.terrain]}`;
+    setTerrainInfo(terrainInfo)
+
+    if (tile.features.length > 0) {
+      let featuresInfo = `Features: ${tile.features.map((feature: any) => feature.name).join(", ")}`
+      setFeaturesInfo(featuresInfo)
+    } else {
+      setFeaturesInfo("")
+    }
+  }
+
+  useEffect(() => {
+    generateAdventurers();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "r") {
+        setGameMap(new GameMap(15, 15))
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, []);
 
   return (
     <>
@@ -16,7 +56,7 @@ function App() {
               <tr key={i}>
                 {row.map((tile, j) => (
                   <td key={j}>
-                    <button onClick={() => console.log(tile)} className={`terrain-${tile.terrain}`}>
+                    <button onClick={() => tileClick(tile)} className={`terrain-${tile.terrain} ${tile.features.length > 0 ? "has-feature" : ""}`}>
                       &nbsp;
                     </button>
                   </td>
@@ -26,6 +66,14 @@ function App() {
           </tbody>
         </table>
       </div>
+      {
+        terrainInfo && (
+          <div className="popup">
+            <p>{terrainInfo}</p>
+            {featuresInfo && <p>{featuresInfo}</p>}
+          </div>
+        )
+      }
     </>
   )
 }

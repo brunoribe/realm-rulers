@@ -19,13 +19,19 @@ function App() {
 
   const tileClick = (tile: any) => {
     let terrainInfo = `Terrain: ${TerrainType[tile.terrain]}`;
-    setTerrainInfo(terrainInfo)
+    setTerrainInfo(terrainInfo);
 
     if (tile.features.length > 0) {
       let featuresInfo = `Features: ${tile.features.map((feature: any) => feature.name).join(", ")}`
       setFeaturesInfo(featuresInfo)
     } else {
       setFeaturesInfo("")
+    }
+
+    if (tile.features.length > 0) {
+      if (tile.features[0].name === "Dungeon") {
+        console.log(tile.features[0].toString());
+      }
     }
   }
 

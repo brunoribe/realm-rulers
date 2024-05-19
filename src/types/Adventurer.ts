@@ -32,7 +32,6 @@ export class Adventurer {
         this.inventory = [];
     }
 
-    // Método para o aventureiro receber dano
     receiveDamage(damage: number) {
         this.health -= damage;
         if (this.health <= 0) {
@@ -41,13 +40,11 @@ export class Adventurer {
         }
     }
 
-    // Método para o aventureiro atacar outro aventureiro ou monstro
     attack(target: Adventurer) {
-        const damage = this.strength * 2; // Simples cálculo de dano
+        const damage = this.strength * 2;
         target.receiveDamage(damage);
     }
 
-    // Método para curar o aventureiro
     heal(amount: number) {
         this.health += amount;
         if (this.health > this.maxHealth) {
@@ -55,43 +52,36 @@ export class Adventurer {
         }
     }
 
-    // Método para adicionar experiência
     gainExperience(exp: number) {
         this.experience += exp;
-        if (this.experience >= this.level * 100) { // Suponha 100 exp por nível
+        if (this.experience >= this.level * 100) {
             this.levelUp();
         }
     }
 
-    // Método para o aventureiro subir de nível
     levelUp() {
         this.level++;
         this.maxHealth += 20;
         this.agility += 2;
         this.strength += 2;
         this.intelligence += 2;
-        this.health = this.maxHealth; // Restaurar a saúde ao subir de nível
+        this.health = this.maxHealth;
         console.log(`${this.name} has leveled up to level ${this.level}!`);
     }
 
-    // Método para quando o aventureiro morre
     die() {
         console.log(`${this.name} has died.`);
-        // Aqui você pode adicionar lógica adicional para quando o aventureiro morre
     }
 
-    // Método para adicionar itens ao inventário
     addItem(item: Item) {
         this.inventory.push(item);
     }
 
-    // Método para usar um item do inventário
     useItem(itemIndex: number) {
         const item = this.inventory[itemIndex];
-        // Suponha que o item possa ser um item de cura
-        if (item && item.type === 'potion') {
+        if (item && item.type === 'Potion') {
             this.heal(item.effect);
-            this.inventory.splice(itemIndex, 1); // Remove o item após o uso
+            this.inventory.splice(itemIndex, 1);
         }
     }
 

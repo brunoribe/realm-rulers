@@ -3,16 +3,6 @@ export interface Feature {
     description: string;
 }
 
-class Dungeon implements Feature {
-    name: string;
-    description: string;
-
-    constructor(name: string, description: string) {
-        this.name = name;
-        this.description = description;
-    }
-}
-
 class City implements Feature {
     name: string;
     description: string;
@@ -33,4 +23,4 @@ class Lair implements Feature {
     }
 }
 
-export { Dungeon, City, Lair };
+export { City, Lair };

@@ -1,7 +1,8 @@
 import { createNoise2D } from 'simplex-noise';
 import { Tile } from './Tile';
 import { TerrainType } from '../enum/TerrainType';
-import { Feature, Dungeon, City, Lair } from './Feature';
+import { Feature, City, Lair } from './Feature';
+import { Dungeon } from './Dungeon';
 
 export class GameMap {
     tiles: Tile[][];

@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Realm Rulers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Realm Rulers is a browser-based kingdom simulation game that allows players to build and explore their own kingdoms. Inspired by strategy and simulation games, it uses procedural map generation to create a dynamic and immersive environment.
 
-Currently, two official plugins are available:
+## Features
+- **Procedural Map Generation**: Uses simplex noise to create varied terrains with four different types of terrain: Water, Desert, Grass, and Mountain.
+- **Interactivity**: Click on the map tiles to explore and interact with the terrain.
+- **React and TypeScript**: Developed using the latest web technologies for a responsive and interactive user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React
+- TypeScript
+- Simplex-Noise for terrain generation
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Installation
+To install and run Realm Rulers locally:
+```bash
+git clone https://github.com/your-username/realm-rulers.git
+cd realm-rulers
+npm install
+npm start
